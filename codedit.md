@@ -1,21 +1,27 @@
-# codedit
-Code editor engine in Lua
+---
+project: codedit
+tagline: Code editor engine in Lua
+---
 
 ##  THIS IS WORK IN PROGRESS / NOTHING TO SEE HERE (YET)
 
-v1.0 | [code](http://code.google.com/p/lua-files/source/browse/codedit.lua) | [demo](http://code.google.com/p/lua-files/source/browse/codedit_demo.lua) | LuaJIT 2, Lua 5.1, Lua 5.2
+v0.1a | Lua 5.1, Lua 5.2, LuaJIT 2
 
 ## `local codedit = require'codedit'`
 
-Codedit is a source code editor engine written in Lua. It has a minimalist design, striving to capture the essence of source code editing, making it easy to explore, understand and extend. It also comes with some cool features out-of-the-box.
+Codedit is a source code editor engine written in Lua. It has a minimalist design, striving to capture the
+essence of source code editing, making it easy to explore, understand and extend.
+It also comes with some cool features out-of-the-box.
 
 ## Highlights
+
   * utf8-ready, using a small [string module](http://code.google.com/p/lua-files/source/browse/codedit_str.lua) over [utf8].
   * cross-platform: written in Lua and has no dependencies
   * simple interface for integrating with rendering and input APIs ([https://code.google.com/p/lua-files/source/browse/cplayer/code_editor.lua example])
   * highly modular, with separate buffer, cursor, selection, view and controller objects, allowing multiple cursors and multiple selections.
 
 ## Features
+
   * *Buffers* ([code](http://code.google.com/p/lua-files/source/browse/codedit_buffer.lua))
     * *File format autodetection* ([code](http://code.google.com/p/lua-files/source/browse/codedit_detect.lua))
       * loading files with mixed line endings
@@ -47,6 +53,7 @@ Codedit is a source code editor engine written in Lua. It has a minimalist desig
 
 
 ## Limitations
+
   * fixed char width (monospace fonts only)
   * fixed line height
   * no incremental repaint
@@ -81,7 +88,18 @@ Codedit is a source code editor engine written in Lua. It has a minimalist desig
 
 ## Buffers
 
-Buffers are at the core of text editing. A buffer stores the text as a list of lines and contains methods for analyzing, navigating, selecting and editing the text at a logical level, independent of how the text is rendered. The buffer contains methods that deal with text at various levels of abstraction. At the bottom we have lines of utf8 codepoints (chars), let's call that the binary space. Over that there's the char space, the space of lines and columns, where any char can found by the pair (line, col). Since the chars are stored as utf8, the correspondence between char space and binary space is not linear. We don't deal much in binary space, only in char space (we use the utf8 library to traverse the codepoints). The space outside of the available text is called the unclamped char space. We cannot select text from this space, but we can navigate it as if it was made of empty lines. Higher up there's the visual space, which is how the text looks after tab expansion, for a fixed tab size. Again, the correspondence between char space (let's call it real space) and visual space is not linear. Since we don't support automatic line wrapping, lines have a 1:1 correspondence between all these spaces, only the columns are different.
+Buffers are at the core of text editing. A buffer stores the text as a list of lines and contains methods for analyzing,
+navigating, selecting and editing the text at a logical level, independent of how the text is rendered.
+The buffer contains methods that deal with text at various levels of abstraction. At the bottom we have lines of
+utf8 codepoints (chars), let's call that the binary space. Over that there's the char space, the space of lines
+and columns, where any char can found by the pair (line, col). Since the chars are stored as utf8, the correspondence
+between char space and binary space is not linear. We don't deal much in binary space, only in char space
+(we use the utf8 library to traverse the codepoints). The space outside of the available text is called the unclamped
+char space. We cannot select text from this space, but we can navigate it as if it was made of empty lines.
+Higher up there's the visual space, which is how the text looks after tab expansion, for a fixed tab size.
+Again, the correspondence between char space (let's call it real space) and visual space is not linear.
+Since we don't support automatic line wrapping, lines have a 1:1 correspondence between all these spaces,
+only the columns are different.
 
 
 ## API
