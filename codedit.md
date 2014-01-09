@@ -16,40 +16,40 @@ It also comes with some cool features out-of-the-box.
 
 ## Highlights
 
-  * utf8-ready, using a small [string module](http://code.google.com/p/lua-files/source/browse/codedit_str.lua) over [utf8].
+  * utf8-ready, using a small [string module](https://github.com/luapower/codedit/blob/master/codedit_str.lua) over [utf8].
   * cross-platform: written in Lua and has no dependencies
-  * simple interface for integrating with rendering and input APIs ([https://code.google.com/p/lua-files/source/browse/cplayer/code_editor.lua example])
+  * simple interface for integrating with rendering and input APIs ([https://github.com/luapower/cplayer/blob/master/cplayer/code_editor.lua example])
   * highly modular, with separate buffer, cursor, selection, view and controller objects, allowing multiple cursors and multiple selections.
 
 ## Features
 
-  * *Buffers* ([code](http://code.google.com/p/lua-files/source/browse/codedit_buffer.lua))
-    * *File format autodetection* ([code](http://code.google.com/p/lua-files/source/browse/codedit_detect.lua))
+  * *Buffers* ([code](https://github.com/luapower/codedit/blob/master/codedit_buffer.lua))
+    * *File format autodetection* ([code](https://github.com/luapower/codedit/blob/master/codedit_detect.lua))
       * loading files with mixed line endings
       * detecting the most common line ending used in the file and using that when saving the file
-    * *Normalization* ([code](http://code.google.com/p/lua-files/source/browse/codedit_normal.lua))
+    * *Normalization* ([code](https://github.com/luapower/codedit/blob/master/codedit_normal.lua))
       * removing spaces past end-of-line before saving
       * removing empty lines at end-of-file before saving, or ensuring that the file ends with at least one empty line before saving
-    * undo/redo stack ([code](http://code.google.com/p/lua-files/source/browse/codedit_undo.lua))
-  * *Selections* ([code](http://code.google.com/p/lua-files/source/browse/codedit_selction.lua))
-    * block (column) selection mode ([code](http://code.google.com/p/lua-files/source/browse/codedit_blocksel.lua))
+    * undo/redo stack ([code](https://github.com/luapower/codedit/blob/master/codedit_undo.lua))
+  * *Selections* ([code](https://github.com/luapower/codedit/blob/master/codedit_selction.lua))
+    * block (column) selection mode ([code](https://github.com/luapower/codedit/blob/master/codedit_blocksel.lua))
     * indent/outdent (also for block selections)
-  * *Cursors* ([code](http://code.google.com/p/lua-files/source/browse/codedit_cursor.lua))
+  * *Cursors* ([code](https://github.com/luapower/codedit/blob/master/codedit_cursor.lua))
     * insert and overwrite insert modes, with wide overwrite caret
     * smart tabs: use tabs only when indenting, and use spaces inside the lines
     * option to allow or restrict the cursor past end-of-line
     * option to allow or restrict the cursor past end-of-file
     * auto-indent: copy the indent of the line above when pressing enter
     * moving through words
-  * *Rendering* ([code](http://code.google.com/p/lua-files/source/browse/codedit_render.lua))
+  * *Rendering* ([code](https://github.com/luapower/codedit/blob/master/codedit_render.lua))
     * syntax highlighting using [scintillua](http://foicica.com/scintillua/) lexers
-    * simple rendering and measuring API for monospace fonts ([code](http://code.google.com/p/lua-files/source/browse/codedit_metrics.lua))
-    * user-defined margins ([code](http://code.google.com/p/lua-files/source/browse/codedit_margin.lua))
-      * line numbers margin ([code](http://code.google.com/p/lua-files/source/browse/codedit_line_numbers.lua))
-  * *Controller* ([code](http://code.google.com/p/lua-files/source/browse/codedit_editor.lua))
-    * configurable key bindings and commands ([code](http://code.google.com/p/lua-files/source/browse/codedit_keys.lua))
+    * simple rendering and measuring API for monospace fonts ([code](https://github.com/luapower/codedit/blob/master/codedit_metrics.lua))
+    * user-defined margins ([code](https://github.com/luapower/codedit/blob/master/codedit_margin.lua))
+      * line numbers margin ([code](https://github.com/luapower/codedit/blob/master/codedit_line_numbers.lua))
+  * *Controller* ([code](https://github.com/luapower/codedit/blob/master/codedit_editor.lua))
+    * configurable key bindings and commands ([code](https://github.com/luapower/codedit/blob/master/codedit_keys.lua))
     * simple clipboard API (stubbed to an in-process clipboard)
-    * scrolling, one line/char at a time or smooth scrolling ([code](http://code.google.com/p/lua-files/source/browse/codedit_scroll.lua))
+    * scrolling, one line/char at a time or smooth scrolling ([code](https://github.com/luapower/codedit/blob/master/codedit_scroll.lua))
     * selecting with the mouse
 
 
