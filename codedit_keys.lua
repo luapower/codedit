@@ -48,6 +48,10 @@ editor.key_bindings = { --flag order is ctrl+alt+shift
 	--additional navigation
 	['alt+up']      = 'move_up_page',
 	['alt+down']    = 'move_down_page',
+	--bookmarks (TODO)
+	['ctrl+f2']     = 'toggle_bookmark',
+	['f2']          = 'move_next_bookmark',
+	['shift+f2']    = 'move_prev_bookmark',
 	--additional selection
 	['ctrl+A']      = 'select_all',
 	--editing
