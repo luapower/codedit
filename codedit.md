@@ -1,6 +1,6 @@
 ---
-project:     codedit
-tagline:     Code editor engine in Lua
+project: codedit
+tagline: code editor engine in Lua
 ---
 
 ##  THIS IS WORK IN PROGRESS / NOTHING TO SEE HERE (YET)
