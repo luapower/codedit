@@ -17,7 +17,7 @@ It also comes with some cool features out-of-the-box.
 
   * utf8-ready, using a small [string module](https://github.com/luapower/codedit/blob/master/codedit_str.lua) over [utf8].
   * cross-platform: written in Lua and has no dependencies
-  * simple interface for integrating with rendering and input APIs ([https://github.com/luapower/cplayer/blob/master/cplayer/code_editor.lua example])
+  * simple interface for integrating with rendering and input APIs ([example](https://github.com/luapower/cplayer/blob/master/cplayer/code_editor.lua))
   * highly modular, with separate buffer, cursor, selection, view and controller objects, allowing multiple cursors and multiple selections.
 
 ## Features
