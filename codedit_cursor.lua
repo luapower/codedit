@@ -1,4 +1,4 @@
---codedit cursor object: caret-based navigation and editing
+--codedit cursor object: caret-based navigation and editing.
 local glue = require'glue'
 local str = require'codedit_str'
 local tabs = require'codedit_tabs'

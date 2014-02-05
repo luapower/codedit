@@ -6,7 +6,7 @@
 :client :m1 :m2 :                 :  view rect (*):     x, y, w, h (contains the clipped margins and the scrollbox)
 :rect   :   :   :                 :  scrollbox rect:    x + margins_w, y, w - margins_w, h
 :       :___:___:_____________    :  clip rect:         clip_x, clip_y, clip_w, clip_h (obtained by drawing the scrollbox)
-:       |*  |   |clip       ||    :  client rect:       clip_x + scroll_x, clip_y + scroll_y, client_size()
+:       |(*)|   |clip       ||    :  client rect:       clip_x + scroll_x, clip_y + scroll_y, client_size()
 :       |   |   |rect       ||    :  margin1 rect:      x, client_y, m1:get_width(), client_h
 :       |   |   |           |N    :  margin1 clip rect: m1_x, clip_y, m1_w, clip_h
 :       |   |   |           |N    :

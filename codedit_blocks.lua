@@ -1,4 +1,4 @@
---codedit text blocks: vertically aligned text between two subsequent text positions.
+--codedit text blocks: vertically aligned text between two subsequent text positions. selection and editing.
 --line1 and line2 must be valid, subsequent lines. col1 and col2 can be anything.
 local buffer = require'codedit_buffer'
 local str = require'codedit_str'

@@ -1,4 +1,4 @@
---codedit buffer object
+--codedit buffer object: text navigation and manipulation.
 local glue = require'glue'
 local str = require'codedit_str'
 require'codedit_reflow'
@@ -15,7 +15,7 @@ local buffer = {
 
 function buffer:new(editor, view, text)
 	self = glue.inherit({
-		editor = editor,  --for getstate & setstate
+		editor = editor,  --for save_state & load_state (see codedit_undo)
 		view = view,      --for tabsize
 	}, self)
 
@@ -132,7 +132,7 @@ end
 
 --char-by-char linear navigation based on line boundaries
 
---position after of some char, unclamped
+--position after some char, unclamped
 function buffer:next_char_pos(line, col, restrict_eol)
 	if not restrict_eol or (self:getline(line) and col < self:last_col(line) + 1) then
 		return line, col + 1
@@ -339,12 +339,12 @@ function buffer:indent_line(line, use_tab)
 	return self:indent(line, 1, use_tab)
 end
 
---find the optimal number of tabs and spaces that fit between two visual columns
+--find the max number of tabs and minimum number of spaces that fit between two visual columns
 function buffer:tabs_and_spaces(vcol1, vcol2)
 	return tabs.tabs_and_spaces(vcol1, vcol2, self.view.tabsize)
 end
 
---genearte whitespace (tabs and spaces or just spaces, depending on the use_tabs flag) between two vcols.
+--generate whitespace (tabs and spaces or just spaces, depending on the use_tabs flag) between two vcols.
 function buffer:gen_whitespace(vcol1, vcol2, use_tabs)
 	if vcol2 <= vcol1 then
 		return '' --target before cursor: ignore

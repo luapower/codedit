@@ -66,6 +66,7 @@ function block_selection:remove()
 	self:reset(self.line1, self.col1)
 end
 
+--extend selection to the right contain all the available text
 function block_selection:extend_to_last_col()
 	local line1, col1, line2, col2 = self:endpoints()
 	local max_col2 = 0

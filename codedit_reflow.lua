@@ -1,4 +1,4 @@
---codedit str submodule for text reflowing
+--submodule of codedit_str for text reflowing.
 local str = require'codedit_str'
 local tabs = require'codedit_tabs'
 local glue = require'glue'
