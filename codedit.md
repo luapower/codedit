@@ -10,15 +10,20 @@ tagline: code editor engine in Lua
 ## `local codedit = require'codedit'`
 
 Codedit is a source code editor engine written in Lua.
-
 Codedit exposes the logic of source code editing with all its intricacies
 in a set of highly compartimentalized APIs, making it easy to explore, understand and extend.
 
-Being made in pure Lua, it runs on all the platforms that Lua runs on. If you have the means to display
-a character on the screen at certain coordinates, and to process keyboard and mouse events inside
-your Lua environment, then that's all you need to add text/code editing capability to your app.
+Being made in pure Lua, it runs on all the platforms that Lua runs on.
+If, inside your Lua environment, you have the means to:
 
-Codedit also comes with some cool features out-of-the-box, including a minimalist code editor based on [cplayer].
+  * display a character at certain coordinates
+  * display a filled rectangle at certain coordinates
+  * rectangle clipping
+  * process keyboard and mouse events
+
+then you can hook up codedit and add code editing capabilities to your app.
+
+Codedit comes with a minimalist code editor based on [cplayer].
 
 ## Highlights
 

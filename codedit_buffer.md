@@ -41,7 +41,8 @@ buffer.line_highlight_color = nil
 ## Methods
 
 -------------------------------------------------------- -------------------------------------------------------
-`buffer:new(editor, view, [text]) -> buf`						create a buffer object
+`buffer:new(editor, view, [text]) -> buf`						create a buffer object, optionally filled
+																			with an initial text.
 
 `buffer:detect_line_terminator(text) -> term`				get the most common line terminator in a string
 

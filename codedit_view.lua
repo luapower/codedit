@@ -5,19 +5,20 @@
 ...................................
 :client :m1 :m2 :                 :  view rect (*):     x, y, w, h (contains the clipped margins and the scrollbox)
 :rect   :   :   :                 :  scrollbox rect:    x + margins_w, y, w - margins_w, h
-:       :___:___:_____________    :  clip rect:         clip_x, clip_y, clip_w, clip_h (obtained by drawing the scrollbox)
-:       |(*)|   |clip       ||    :  client rect:       clip_x + scroll_x, clip_y + scroll_y, client_size()
-:       |   |   |rect       ||    :  margin1 rect:      x, client_y, m1:get_width(), client_h
-:       |   |   |           |N    :  margin1 clip rect: m1_x, clip_y, m1_w, clip_h
-:       |   |   |           |N    :
-:       |   |   |           |N    :
-:       |   |   |           |N    :
-:       |   |   |           ||    :
-:       |___|___|___________||    :
-:       :   :   +------ZZZ--+     :
+:       :___:___:______________   :  clip rect:         clip_x, clip_y, clip_w, clip_h (from drawing the scrollbox)
+:       |(*)|   |clip       | |   :  client rect:       clip_x + scroll_x, clip_y + scroll_y, client_size()
+:       |   |   |rect       | |   :  margin1 rect:      x, client_y, m1:get_width(), client_h
+:       |   |   |           |#|   :  margin1 clip rect: m1_x, clip_y, m1_w, clip_h
+:       |   |   |           |#|   :
+:       |   |   |           |#|   :
+:       |   |   |           |#|   :
+:       |   |   |           | |   :
+:       |___|___|___________|_|   :
+:       :   :   |_____####__|     :
 :       :   :   :                 :
 :       :   :   :                 :
 ...................................
+
 ]]
 local glue = require'glue'
 local str = require'codedit_str'
@@ -537,7 +538,7 @@ function view:draw_client()
 	end
 end
 
---draw a scrollbox control with (x, y, w, h) outside rect and (cx, cy, cw, ch) client rect.
+--draw a scrollbox widget with (x, y, w, h) outside rect and (cx, cy, cw, ch) client rect.
 --return the new cx, cy, adjusted from user input and other scrollbox constraints, followed by the clipping rect.
 --the client rect is relative to the clipping rect of the scrollbox (which can be different than it's outside rect).
 --this stub implementation is equivalent to a scrollbox that takes no user input, has no margins,
