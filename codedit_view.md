@@ -1,7 +1,7 @@
 ---
 project: codedit
-title: codedit_buffer
-tagline: text manipulation
+title: codedit_view
+tagline: layouting and rendering
 ---
 
 <div class="bg bg-matrix"></div>
