@@ -88,4 +88,3 @@ end
 
 
 if not ... then require'codedit_demo' end
-

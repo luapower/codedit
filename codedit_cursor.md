@@ -4,8 +4,6 @@ title: codedit_cursor
 tagline: text navigation
 ---
 
-<div class="bg bg-matrix"></div>
-
 ## `local cursor = require'codedit_cursor'`
 
 Cursor object, providing caret-based navigation and editing.
@@ -36,7 +34,7 @@ line_highlight_color = nil
 ### Methods
 
 -------------------------------------------------- --------------------------------------------------
-`cursor:new(buffer, view, visible) -> cur`			create a cursor object
+`cursor:new(buffer, [view], visible) -> cur`			create a cursor object
 
 __navigation__
 
@@ -74,7 +72,7 @@ __navigation__
 
 `cur:move_to_selection(sel)`								navigation to selection boundaries
 
-`cur:move_to_coords(x, y)`									navigation to pixel coordinates
+`cur:move_to_coords(x, y)`									navigation to view coordinates
 
 __editing__
 

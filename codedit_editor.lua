@@ -1,4 +1,4 @@
---codedit main class
+--codedit controller: putting it all together
 local glue = require'glue'
 local buffer = require'codedit_buffer'
 require'codedit_blocks'

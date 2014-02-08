@@ -16,8 +16,8 @@ player.show_magnifier = false
 function player:on_render(cr)
 
 	if self.window.w ~= 800 then
-		self.window.w = 800
-		return
+		--self.window.w = 800
+		--return
 	end
 
 	local editor_y = 40
@@ -33,7 +33,7 @@ function player:on_render(cr)
 								view = {
 									x = x, y = editor_y, w = w, h = h,
 									eol_markers = false, minimap = false, line_numbers = false,
-									font_file = 'x:/work/lua-files/media/fonts/FSEX300.ttf'
+									font_file = 'media/fonts/FSEX300.ttf'
 								}}
 
 		editor = self:code_editor(editor)
@@ -48,7 +48,7 @@ function player:on_render(cr)
 
 		editor.view.lang = self:mbutton{
 			id = 'lexer_' .. i,
-			x = x, y = 10, w = 180, h = 26, values = {'none', 'cpp', 'lua'}, selected = editor.view.lang or 'lua'}
+			x = x, y = 10, w = 180, h = 26, values = {'none', 'cpp', 'lua'}, selected = editor.view.lang or 'none'}
 		editor.view.lang = editor.view.lang ~= 'none' and editor.view.lang or nil
 
 		editors[i] = editor
@@ -68,6 +68,7 @@ function player:on_render(cr)
 		selected = b.line_terminator}
 	v.eol_markers = self:togglebutton{id = 'eol markers', x = 10, y = 100, w = 80, h = 24, selected = v.eol_markers}
 	]]
+
 end
 
 player:play()

@@ -3,8 +3,6 @@ project: codedit
 tagline: code editor engine in Lua
 ---
 
-<div class="bg bg-matrix"></div>
-
 ##  THIS IS WORK IN PROGRESS / NOTHING TO SEE HERE (YET)
 
 ## `local codedit = require'codedit'`

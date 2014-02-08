@@ -4,8 +4,6 @@ title: codedit_buffer
 tagline: text manipulation
 ---
 
-<div class="bg bg-matrix"></div>
-
 ## `local buffer = require'codedit_buffer'`
 
 Buffers are the core of text editing. A buffer stores the text as a list of lines and contains methods for analyzing,

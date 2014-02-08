@@ -4,8 +4,6 @@ title: codedit_view
 tagline: layouting and rendering
 ---
 
-<div class="bg bg-matrix"></div>
-
 ## `local view_class = require'codedit_view'`
 
 Codedit views deal with measuring, layouting, rendering and hit testing of codedit buffers.
@@ -16,7 +14,7 @@ __NOTE:__ codedit_view assumes a monospace font and a fixed line height.
 
 ## Properties
 
-~~~
+~~~{.lua}
 --tab expansion
 tabsize = 3
 --font metrics
@@ -146,6 +144,7 @@ __clipping in visual char space__
 `view:margin_client_to_screen(margin, x, y)`
 
 -------------------------------------------- -------------------------------------------
+
 
 
 [^scrolling]: scrolling means adjusting the position of the client rectangle relative to the clipping rectangle

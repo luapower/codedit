@@ -2,9 +2,7 @@
 local glue = require'glue'
 local str = require'codedit_str'
 
-_LEXER = nil
-lexer = require'lexers.lexer'
-lexer.property = {}
+local lexer = require'lexer'
 
 --select text from buffer between (line1, p1) up to the end of line2 excluding line terminator.
 local function select_text(buffer, line1, p1, line2)

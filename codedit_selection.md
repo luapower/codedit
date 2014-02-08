@@ -4,8 +4,6 @@ title: codedit_selection
 tagline: text selection
 ---
 
-<div class="bg bg-matrix"></div>
-
 ## `local selection = require'codedit_selection'`
 
 Selecting contiguous text between two char positions, (line1, col1, line2, col2), where:
@@ -28,7 +26,7 @@ line_rect = nil --line_rect(line) -> x, y, w, h
 ### Methods
 
 -------------------------------------------------- --------------------------------------------------
-`selection:new(buffer, view, visible) -> sel`		create a selection object
+`selection:new(buffer, [view], visible) -> sel`		create a selection object
 
 __boundaries__
 
