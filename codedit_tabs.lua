@@ -1,4 +1,4 @@
---tab expansion module for codedit by Cosmin Apreutesei (unlicensed).
+--tab expansion module for codedit (Cosmin Apreutesei, public domain).
 --translates between visual columns and real columns based on a fixed tabsize.
 --real columns map 1:1 to char indices, while visual columns represent screen columns after tab expansion.
 local str = require'codedit_str'

@@ -1,4 +1,4 @@
---string module for codedit by Cosmin Apreutesei (unlicensed).
+--string module for codedit (Cosmin Apreutesei, public domain).
 --deals specifically with tabs, spaces, lines and words.
 local glue = require'glue'
 local utf8 = require'utf8'
