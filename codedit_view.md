@@ -8,7 +8,8 @@ tagline: layouting and rendering
 
 Codedit views deal with measuring, layouting, rendering and hit testing of codedit buffers.
 Rendering is done in terms of a set of primitive drawing methods, which in codedit_view are just stubs.
-You'll have to subclass codedit_view and implement these methods in order to have a working view.
+You'll have to subclass codedit_view and implement these methods in order to have a working view
+(for subclassing you can use [glue.inherit](glue.html#inherit) or [glue.update](glue.html#update)).
 
 __NOTE:__ codedit_view assumes a monospace font and a fixed line height.
 

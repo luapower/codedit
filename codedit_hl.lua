@@ -1,7 +1,6 @@
 --codedit incremental highlighter: integrating scintillua with a line buffer object.
 local glue = require'glue'
 local str = require'codedit_str'
-
 local lexer = require'lexer'
 
 --select text from buffer between (line1, p1) up to the end of line2 excluding line terminator.
@@ -18,8 +17,8 @@ end
 --lex selected text returning a list of token positions and styles.
 --the token list is a zero-based array of form {[0] = pos1, style1, ..., posN, styleN, posN+1}
 local function lex_text(s, lang)
-	lexer.load(lang)
-	local t = lexer.lex(s, lang)
+	local lex = lexer.load(lang)
+	local t = lexer.lex(lex, s)
 	t[0] = 1
 	return t
 end

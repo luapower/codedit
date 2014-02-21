@@ -159,8 +159,7 @@ __selecting text based on tab expansion__
 																			that is, in the indentation area.
 
 `buf:next_tabful_col(line, col, 									find tabful boundaries. a tabful is the whitespace
-	[restrict_eol]) -> col`
-																			between two tabstops. the tabful column after of some
+    [restrict_eol]) -> col`										between two tabstops. the tabful column after some
 																			char is either the next tabstop or the first
 																			non-space char after the prev. char or the char
 																			after the last col, whichever comes first,
@@ -168,7 +167,7 @@ __selecting text based on tab expansion__
 
 `buf:prev_tabful_col(line, col) -> col`						the tabful column before some char, which is either
 																			the prev. tabstop or the char after the prev.
-																			non-space char, whichever comes last,
+																			non-space char, whichever comes first,
 																			and if before the given char.
 
 __editing based on tabfuls__
@@ -203,7 +202,7 @@ __paragraph boundaries__
 
 __saving to disk__
 
-`buf:save_to_file(filename)`
+`buf:save_to_file(filename)`										save the buffer to disk atomically
 
 __TODO__
 
