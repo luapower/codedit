@@ -1,6 +1,6 @@
 ---
-project: codedit_editor
-tagline: controller
+project: codedit
+tagline: codedit controller
 ---
 
 ## `editor_class = require'codedit_editor'`

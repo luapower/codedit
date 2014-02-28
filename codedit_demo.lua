@@ -5,8 +5,7 @@ local glue = require'glue'
 local editors = {}
 local loaded
 
-filename = 'x:/test.txt'
---filename = 'x:/work/lua-files/csrc/freetype/src/truetype/ttinterp.c'
+filename = 'x:/work/luapower/codedt_demo.lua'
 --text = glue.readfile'c:/temp.c'
 --text = glue.readfile'c:/temp2.c'
 
@@ -28,7 +27,6 @@ function player:on_render(cr)
 
 		local editor = editors[i] or {
 								id = 'code_editor_' .. i,
-								--text = text,
 								filename = filename,
 								view = {
 									x = x, y = editor_y, w = w, h = h,
