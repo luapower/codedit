@@ -224,11 +224,13 @@ end
 
 function player:toggle_full_screen()
 	if self.fullscreen then
-		self.window.titlebar = true
+		self.window.frame = true
+		self.window.border = true
 		self.window:restore()
  	else
 		self.window:maximize()
-		self.window.titlebar = false
+		self.window.frame = false
+		self.window.border = false
 	end
 	self.fullscreen = not self.fullscreen
 	self.panel:move(0, 0, self.window.client_w, self.window.client_h)
