@@ -167,7 +167,7 @@ function player:save_state()
 			table.insert(state.tabs, tab_state)
 		end
 	end
-	pp.fwrite(filename, state)
+	pp.save(filename, state)
 end
 
 function player:load_state()
