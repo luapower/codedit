@@ -9,7 +9,6 @@ filename = 'x:/work/luapower/codedt_demo.lua'
 --text = glue.readfile'c:/temp.c'
 --text = glue.readfile'c:/temp2.c'
 
---player.continuous_rendering = false
 player.show_magnifier = false
 
 function player:on_render(cr)
