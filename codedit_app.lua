@@ -4,7 +4,7 @@ local glue = require'glue'
 local pp = require'pp'
 local winapi = require'winapi'
 require'winapi.filedialogs'
-require'winapi.multimon'
+require'winapi.monitor'
 
 player.continuous_rendering = false
 player.show_magnifier = false

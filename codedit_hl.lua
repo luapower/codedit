@@ -268,7 +268,7 @@ A
 
 	else
 
-		if not ... then require'codedit_demo' end
+		---if not ... then require'codedit_demo' end
 
 	end
 
