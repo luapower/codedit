@@ -3,7 +3,7 @@ project: codedit
 tagline: code editor engine in Lua
 ---
 
-##  THIS IS WORK IN PROGRESS / NOTHING TO SEE HERE (YET)
+<warn>WORK IN PROGRESS / NOTHING TO SEE HERE (YET)</warn>
 
 ## `local codedit = require'codedit'`
 
