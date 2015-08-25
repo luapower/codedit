@@ -1,6 +1,4 @@
 ---
-project: codedit
-title: codedit_selection
 tagline: text selection
 ---
 

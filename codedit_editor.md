@@ -1,5 +1,4 @@
 ---
-project: codedit
 tagline: codedit controller
 ---
 

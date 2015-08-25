@@ -1,5 +1,4 @@
 ---
-project: codedit
 tagline: code editor engine in Lua
 ---
 

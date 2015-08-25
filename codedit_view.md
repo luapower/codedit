@@ -1,6 +1,4 @@
 ---
-project: codedit
-title: codedit_view
 tagline: layouting and rendering
 ---
 

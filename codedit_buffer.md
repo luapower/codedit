@@ -1,6 +1,4 @@
 ---
-project: codedit
-title: codedit_buffer
 tagline: text manipulation
 ---
 
