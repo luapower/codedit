@@ -2,7 +2,7 @@
 tagline: code editor engine in Lua
 ---
 
-<warn>WORK IN PROGRESS / NOTHING TO SEE HERE (YET)</warn>
+<warn>Work in progress</warn>
 
 ## `local codedit = require'codedit'`
 
